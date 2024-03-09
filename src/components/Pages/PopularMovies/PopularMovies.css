@@ -1,0 +1,91 @@
+#main {
+  background-color: var(--primary-color);
+}
+
+.popular-movies__title {
+  color: var(--primary-contrast-color);
+  text-align: center;
+  margin-top: 0;
+  padding-top: 0.83rem;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  margin: 0rem 1rem;
+  padding: 1rem 0rem;
+  border-radius: 1rem;
+}
+
+.carousel__inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  border-radius: 1rem;
+}
+
+.carousel__item {
+  flex: 0 0 auto;
+  width: 100%;
+  max-height: 36rem;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  background: #aaa;
+  border-radius: 1rem;
+}
+
+.carousel__item__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.carousel__item__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* Buttons */
+.carousel__button-prev,
+.carousel__button-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  padding: 0;
+  margin: 1rem 0;
+  color: var(--accent-color);
+  text-align: center;
+  background: 0 0;
+  border: 0;
+  opacity: 0.5;
+}
+.carousel__button-prev {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.carousel__button-next {
+  right: 0;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.carousel__button-next:hover,
+.carousel__button-prev:hover {
+  background-color: lightgray;
+}
+
+/* lower caption position */
+@media (min-width: 48rem) {
+  .carousel__item__caption {
+    top: 80%;
+  }
+}

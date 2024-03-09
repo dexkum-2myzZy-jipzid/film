@@ -1,0 +1,39 @@
+.home-page {
+  background-color: var(--primary-color);
+  padding: 1rem;
+}
+
+.home-page__title {
+  background-color: var(--primary-color);
+  color: var(--primary-contrast-color);
+  /* margin: 0; */
+  /* padding: 0 0 1rem; */
+  text-align: center;
+}
+
+.home-page__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.home-page__preview {
+  flex: 1;
+  margin-right: 2rem;
+  color: var(--primary-contrast-color);
+}
+
+.home-page__accordion {
+  flex: 2;
+  align-self: flex-start;
+}
+
+@media (min-width: 48rem) {
+  .home-page__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}

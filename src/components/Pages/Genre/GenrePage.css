@@ -1,0 +1,127 @@
+.film-genre-page {
+  padding: 1rem;
+  background-color: var(--primary-color);
+}
+
+.film-genre-page__title {
+  color: var(--primary-contrast-color);
+  text-align: center;
+}
+
+.film-genre-page__cards {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.film-genre-page__card {
+  grid-column: span 12;
+  grid-row: span 3;
+}
+
+@media (min-width: 48rem) {
+  .film-genre-page__card {
+    grid-column: span 4;
+    grid-row: span 3;
+  }
+}
+
+/* list styles */
+.film-genre-page__layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+
+.film-genre-page__layout-title {
+  padding-right: 0.5rem;
+  color: var(--primary-contrast-color);
+}
+
+/* switch layout button styles */
+.film-genre-page__switch {
+  height: 2.375rem;
+  border: none;
+  cursor: pointer;
+  padding: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5rem;
+  background-color: var(--neutral-color);
+  margin-right: 0.5rem;
+}
+
+.film-genre-page__switch-active {
+  background-color: var(--accent-color);
+}
+
+/* below CSS adapted from https://css.gg under the MIT License */
+.film-genre-page__list-icon {
+  transform: scale(var(--ggs, 1));
+}
+
+.film-genre-page__list-icon,
+.film-genre-page__list-icon::after,
+.film-genre-page__list-icon::before {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 10px;
+  height: 2px;
+  border-left: 6px double;
+  border-right: 4px solid;
+  color: var(--primary-contrast-color);
+}
+
+.film-genre-page__list-icon::after,
+.film-genre-page__list-icon::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+}
+
+.film-genre-page__list-icon::after {
+  bottom: 4px;
+}
+
+.film-genre-page__list-icon::before {
+  top: 4px;
+}
+
+/* below CSS adapted from https://css.gg under the MIT License */
+/* grid icon css */
+.film-genre-page__grid-icon {
+  transform: scale(var(--ggs, 1));
+}
+
+.film-genre-page__grid-icon,
+.film-genre-page__grid-icon::after,
+.film-genre-page__grid-icon::before {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 10px;
+  height: 10px;
+  color: var(--primary-contrast-color);
+}
+
+.film-genre-page__grid-icon::after,
+.film-genre-page__grid-icon::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  border-left: 4px solid;
+  border-right: 4px solid;
+  color: var(--primary-contrast-color);
+}
+
+.film-genre-page__grid-icon::before {
+  top: 0;
+}
+
+.film-genre-page__grid-icon::after {
+  bottom: 0;
+}

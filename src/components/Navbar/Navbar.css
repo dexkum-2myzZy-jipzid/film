@@ -1,0 +1,109 @@
+/* hamburger menu  */
+.navbar__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__button:hover {
+  background-color: var(--neutral-color);
+  transition: background-color 0.3s ease;
+  border-radius: 1.5rem;
+}
+
+/* below CSS adapted from https://css.gg under the MIT License */
+.navbar__icon {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+  border-radius: 24px;
+  border: 2px solid var(--secondary-contrast-color);
+  color: var(--secondary-contrast-color);
+}
+
+.navbar__icon::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: var(--secondary-contrast-color);
+  border-radius: 3px;
+  top: 4px;
+  left: 4px;
+  box-shadow: 0 4px 0, 0 8px 0;
+}
+
+/* navbar styles */
+.navbar__menu {
+  position: absolute;
+  right: 0px;
+  top: 70px;
+  padding: 0;
+  max-height: 0;
+  background-color: var(--secondary-color);
+  overflow: hidden;
+  list-style-type: none;
+  transition: max-height 0.3s, opacity 0.3s;
+}
+
+.navbar__menu--open {
+  max-height: 500px;
+  opacity: 1;
+  transition: max-height 0.3s, opacity 0.3s;
+}
+
+/* navbar item styles */
+.navbar__item {
+  padding: 0.25rem 0.5rem 0.25rem;
+  text-align: left;
+}
+
+.navbar__item:hover,
+.navbar__item:focus {
+  background-color: var(--neutral-color);
+  transition: background-color 0.3s ease;
+  border-radius: 0.5rem;
+}
+
+.navbar__item.selected {
+  background-color: var(--accent-color);
+  border-radius: 0.5rem;
+}
+
+.navbar__link {
+  color: var(--neutral-contrast-color);
+  text-decoration: none;
+}
+
+.navbar__link:hover {
+  color: var(--neutral-contrast-color);
+}
+
+.navbar__link.selected {
+  font-weight: bold;
+}
+
+/* adjust navbar button and menu layout*/
+@media (min-width: 48rem) {
+  .navbar__button {
+    display: none;
+  }
+
+  .navbar__menu {
+    position: static;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-height: 2rem;
+  }
+}

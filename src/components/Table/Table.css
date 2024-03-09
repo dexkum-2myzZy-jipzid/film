@@ -1,0 +1,27 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Styles for the table header and data cells */
+.table__header,
+.table__data {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--neutral-color);
+}
+
+/* Styles for the table header */
+.table__header {
+  background-color: var(--accent-color);
+  color: var(--accent-contrast-color);
+}
+
+/* Styles for the table rows */
+.table__row {
+  background-color: var(--secondary-color);
+  color: var(--secondary-contrast-color);
+}

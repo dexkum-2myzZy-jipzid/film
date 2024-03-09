@@ -1,0 +1,57 @@
+.accordion {
+  border: 1px solid var(--neutral-color);
+  border-radius: 0.5rem;
+}
+.accordion__item {
+  border-bottom: 1px solid var(--neutral-color);
+}
+
+.accordion__item:last-of-type {
+  border-bottom: 0;
+}
+
+.accordion__header {
+  background-color: var(--primary-color);
+  color: var(--primary-contrast-color);
+  padding: 10px;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Modifier for active (open) accordion header */
+.accordion__header--active {
+  background-color: var(--accent-color);
+  color: var(--accent-contrast-color);
+}
+
+.accordion__header--first {
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.accordion__header--last {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+/* This rule removes the bottom border radius of the last header when it's active */
+.accordion__header--active.accordion__header--last {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.accordion__body {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: var(--primary-contrast-color);
+  border-top: none;
+}
+
+/* This rule adds bottom border radius to the last accordion body */
+.accordion__body--last {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
